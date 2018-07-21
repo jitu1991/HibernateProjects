@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		 <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+        <property name="hibernate.connection.username">me</property>
+        <property name="hibernate.connection.password">mine</property>
+        <property name="hibernate.connection.url">jdbc:derby://localhost:1527/myDB;create=true</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+        
+        <!-- Enable the second-level cache -->
+        <property name="cache.use_second_level_cache">true</property>
+        <property name="cache.use_query_cache">true</property>
+        <property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+
+        <!-- Disble the second level cache -->
+        <!-- <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property> -->
+        
+        <!-- Drop and recreate the database schema -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        
+        <!-- Names the entity annotated classes -->
+		<mapping class="com.test.hibernate.dto.UserDetails" />
+		<mapping class="com.test.hibernate.dto.UserDetails10" />
+		<mapping class="com.test.hibernate.dto.UserDetails12" />
+		<mapping class="com.test.hibernate.dto.UserDetails13" />
+		<mapping class="com.test.hibernate.dto.UserDetails14" />
+		<mapping class="com.test.hibernate.dto.UserDetails15" />
+		<mapping class="com.test.hibernate.dto.UserDetails16" />
+		<mapping class="com.test.hibernate.dto.UserDetails21" />
+		<mapping class="com.test.hibernate.dto.UserDetails28" />
+		<mapping class="com.test.hibernate.dto.Vehicle" />
+		<mapping class="com.test.hibernate.dto.Vehicle13" />
+		<mapping class="com.test.hibernate.dto.Vehicle14" />
+		<mapping class="com.test.hibernate.dto.Vehicle15" />
+		<mapping class="com.test.hibernate.dto.Vehicle16" />
+		<mapping class="com.test.hibernate.dto.Vehicle17" />
+		<mapping class="com.test.hibernate.dto.TwoWheeler" />
+		<mapping class="com.test.hibernate.dto.FourWheeler" />
+		<mapping class="com.test.hibernate.dto.Student" />
+			</session-factory>
+
+</hibernate-configuration>
